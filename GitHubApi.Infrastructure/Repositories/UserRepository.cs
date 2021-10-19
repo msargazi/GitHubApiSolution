@@ -15,6 +15,13 @@ namespace GitHubApi.Infrastructure.Repositories
         {
         }
 
+        public async Task<User> GetByUserId(int userId)
+        {
+           return await _dbContext.Users
+                         .Where(x => x.UserId == userId)
+                         .FirstOrDefaultAsync();
+        }
+
         public async Task<User> GetUserByUserName(string userName)
         {
             return await _dbContext.Users

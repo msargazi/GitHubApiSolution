@@ -8,5 +8,6 @@ namespace GitHubApi.Core.IRepositories
     public interface IUserRepository : IRepository<User>
     {
         Task<User> GetUserByUserName(string userName);
+        Task<User> GetByUserId(int userId);
     }
 }

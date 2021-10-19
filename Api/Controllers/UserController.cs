@@ -39,26 +39,22 @@ namespace Api.Controllers
         [ProducesResponseType(typeof(User), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<User>> GetUserByUserName(string userName)
         {
-            var query = new GetUserByUserNameQuery(userName);
-            var user = await _mediator.Send(query);
+            var header = new NameValueCollection();
+            header.Add("User-Agent", "GithubApi");
 
-            if (user == null)
-            {
-                var header = new NameValueCollection();
-                header.Add("User-Agent", "GithubApi");
+            var message = new HttpRequestBuilder(_settings.BaseAddress)
+                         .SetPath(_settings.UserPath)
+                         .AddToPath(userName)
+                         .Headers(header)
+                         .HttpMethod(HttpMethod.Get)
+                         .GetHttpMessage();
 
-                var message = new HttpRequestBuilder(_settings.BaseAddress)
-                             .SetPath(_settings.UserPath)
-                             .AddToPath(userName)
-                             .Headers(header)
-                             .HttpMethod(HttpMethod.Get)
-                             .GetHttpMessage();
+            var userModel = await SendRequest<UserModel>(message);
 
-                var userModel = await SendRequest<UserModel>(message);
-                user = userModel.ToModel();
-                var createUserCommand = user.ToModel();
-                await _mediator.Send(createUserCommand);
-            }
+            var user = userModel.ToModel();
+
+            var createUserCommand = user.ToModel();
+            await _mediator.Send(createUserCommand);
 
             return Ok(user);
         }

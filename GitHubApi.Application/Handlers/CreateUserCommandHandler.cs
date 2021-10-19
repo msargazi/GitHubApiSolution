@@ -18,6 +18,10 @@ namespace GitHubApi.Application.Handlers
 
         public async Task<User> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
+            var user = await _userRepository.GetByUserId(command.UserId);
+            if (user != null)
+                await _userRepository.DeleteAsync(user);
+
             var newUser = new User
             {
                 AvatarUrl = command.AvatarUrl,
@@ -25,6 +29,7 @@ namespace GitHubApi.Application.Handlers
                 NodeId = command.NodeId,
                 UserId = command.UserId
             };
+
             return await _userRepository.AddAsync(newUser);
         }
     }
