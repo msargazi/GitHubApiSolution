@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApi.Core", "GitHubApi.Core\GitHubApi.Core.csproj", "{2FEA1838-689C-4FED-AA6D-7D26C47A87CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubApi.Core", "GitHubApi.Core\GitHubApi.Core.csproj", "{2FEA1838-689C-4FED-AA6D-7D26C47A87CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApi.Infrastructure", "GitHubApi.Infrastructure\GitHubApi.Infrastructure.csproj", "{5C0E9EF1-74A9-4D3D-A35C-98A9B7664577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubApi.Infrastructure", "GitHubApi.Infrastructure\GitHubApi.Infrastructure.csproj", "{5C0E9EF1-74A9-4D3D-A35C-98A9B7664577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApi.Application", "GitHubApi.Application\GitHubApi.Application.csproj", "{47B9BC0E-528D-4D98-BFE6-8A14B6C50C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubApi.Application", "GitHubApi.Application\GitHubApi.Application.csproj", "{47B9BC0E-528D-4D98-BFE6-8A14B6C50C03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalServices", "ExternalServices", "{0C16486F-2407-465B-AF8C-E376EA487ADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{056919A9-F885-441B-B71E-C204CDF55D92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{47B9BC0E-528D-4D98-BFE6-8A14B6C50C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47B9BC0E-528D-4D98-BFE6-8A14B6C50C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47B9BC0E-528D-4D98-BFE6-8A14B6C50C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056919A9-F885-441B-B71E-C204CDF55D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056919A9-F885-441B-B71E-C204CDF55D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056919A9-F885-441B-B71E-C204CDF55D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056919A9-F885-441B-B71E-C204CDF55D92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{056919A9-F885-441B-B71E-C204CDF55D92} = {0C16486F-2407-465B-AF8C-E376EA487ADA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9EEB2EC-E603-4737-B35B-5D18A1BCE207}
