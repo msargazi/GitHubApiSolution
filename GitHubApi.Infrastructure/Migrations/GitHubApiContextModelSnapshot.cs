@@ -18,7 +18,7 @@ namespace GitHubApi.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GitHubApi.Core.Entities.Repository", b =>
+            modelBuilder.Entity("GitHubApi.Core.Entities.Repo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace GitHubApi.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Repositories");
+                    b.ToTable("Repos");
                 });
 
             modelBuilder.Entity("GitHubApi.Core.Entities.User", b =>
@@ -77,7 +77,7 @@ namespace GitHubApi.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("GitHubApi.Core.Entities.Repository", b =>
+            modelBuilder.Entity("GitHubApi.Core.Entities.Repo", b =>
                 {
                     b.HasOne("GitHubApi.Core.Entities.User", "Owner")
                         .WithMany()

@@ -23,7 +23,7 @@ namespace GitHubApi.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Repositories",
+                name: "Repos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -38,9 +38,9 @@ namespace GitHubApi.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Repositories", x => x.Id);
+                    table.PrimaryKey("PK_Repos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Repositories_Users_UserId",
+                        name: "FK_Repos_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -48,15 +48,15 @@ namespace GitHubApi.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Repositories_UserId",
-                table: "Repositories",
+                name: "IX_Repos_UserId",
+                table: "Repos",
                 column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Repositories");
+                name: "Repos");
 
             migrationBuilder.DropTable(
                 name: "Users");
