@@ -10,7 +10,7 @@ namespace GitHubApi.Core.Entities
         public string Name { get; set; }
         public string FullName { get; set; }
         public bool Private { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; } 
 
         #region NavigationProp
         public virtual User Owner { get; set; }
