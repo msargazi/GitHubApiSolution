@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GitHubApi.Core.Entities
 {
-    public class Repository : Entity
+    public class Repo : Entity
     {
         public int RepositoryId { get; set; }
         public string NodeId { get; set; }

@@ -10,7 +10,7 @@ namespace GitHubApi.Infrastructure.Data
         }
 
         #region DbSets
-        public DbSet<Repository> Repositories { get; set; }
+        public DbSet<Repo> Repos { get; set; }
         public DbSet<User> Users { get; set; }
         #endregion
     }
