@@ -1,6 +1,5 @@
 ﻿using GitHubApi.Core.Entities;
 using MediatR;
-using System.Collections.Generic;
 
 namespace GitHubApi.Application.Commands
 {

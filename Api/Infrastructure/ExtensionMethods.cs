@@ -1,10 +1,7 @@
 ﻿using Api.Models;
 using GitHubApi.Application.Commands;
 using GitHubApi.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Api.Infrastructure
 {
@@ -39,21 +36,6 @@ namespace Api.Infrastructure
         #endregion
 
         #region Repo
-        //public static Repo ToModel(this RepoModel model)
-        //{
-        //    if (model == null)
-        //        return null;
-        //    return new Repo
-        //    {
-        //        Description = model.Description,
-        //        FullName = model.Full_name,
-        //        Name = model.Name,
-        //        NodeId = model.Node_id,
-        //        UserId = model.Owner.Id,
-        //        Private = model.Private,
-        //        RepositoryId = model.Id
-        //    };
-        //}
         public static CreateRepoCommand ToModel(this RepoModel model)
         {
             if (model == null)

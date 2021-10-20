@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 using Api.Infrastructure;
 using Api.Models;
 using Api.Settings;
-using GitHubApi.Application.Queries;
 using GitHubApi.Core.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers

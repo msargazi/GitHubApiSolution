@@ -9,9 +9,7 @@ using Api.Infrastructure;
 using Api.Models;
 using Api.Settings;
 using GitHubApi.Core.Entities;
-using GitHubApi.Core.IRepositories;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
