@@ -36,8 +36,8 @@ namespace Api.Controllers
 
         #region Actions
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Repo>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<User>> GetRepositoryByUserName(string userName)
+        [ProducesResponseType(typeof(IEnumerable<RepoModel>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<RepoModel>> GetRepositoryByUserName(string userName)
         {
             var header = new NameValueCollection();
             header.Add("User-Agent", "GithubApi");

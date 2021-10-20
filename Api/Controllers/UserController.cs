@@ -34,8 +34,8 @@ namespace Api.Controllers
 
         #region Actions
         [HttpGet]
-        [ProducesResponseType(typeof(User), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<User>> GetUserByUserName(string userName)
+        [ProducesResponseType(typeof(UserModel), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<UserModel>> GetUserByUserName(string userName)
         {
             var header = new NameValueCollection();
             header.Add("User-Agent", "GithubApi");
@@ -54,7 +54,7 @@ namespace Api.Controllers
             var createUserCommand = user.ToModel();
             await _mediator.Send(createUserCommand);
 
-            return Ok(user);
+            return Ok(userModel);
         }
         #endregion
 

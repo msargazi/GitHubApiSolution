@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubApi.Application", "Gi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalServices", "ExternalServices", "{0C16486F-2407-465B-AF8C-E376EA487ADA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{056919A9-F885-441B-B71E-C204CDF55D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{056919A9-F885-441B-B71E-C204CDF55D92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BCE6E87C-C27C-4A34-856F-687D8D7525E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "Api.Test\Api.Test.csproj", "{E1F91FA9-95DA-4190-BA9D-9948860B98A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApi.Application.Test", "GitHubApi.Application.Test\GitHubApi.Application.Test.csproj", "{A8BCA693-0762-4551-B08B-2019C532BE20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +41,22 @@ Global
 		{056919A9-F885-441B-B71E-C204CDF55D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{056919A9-F885-441B-B71E-C204CDF55D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{056919A9-F885-441B-B71E-C204CDF55D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F91FA9-95DA-4190-BA9D-9948860B98A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F91FA9-95DA-4190-BA9D-9948860B98A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F91FA9-95DA-4190-BA9D-9948860B98A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F91FA9-95DA-4190-BA9D-9948860B98A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BCA693-0762-4551-B08B-2019C532BE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BCA693-0762-4551-B08B-2019C532BE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BCA693-0762-4551-B08B-2019C532BE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BCA693-0762-4551-B08B-2019C532BE20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{056919A9-F885-441B-B71E-C204CDF55D92} = {0C16486F-2407-465B-AF8C-E376EA487ADA}
+		{E1F91FA9-95DA-4190-BA9D-9948860B98A1} = {BCE6E87C-C27C-4A34-856F-687D8D7525E8}
+		{A8BCA693-0762-4551-B08B-2019C532BE20} = {BCE6E87C-C27C-4A34-856F-687D8D7525E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9EEB2EC-E603-4737-B35B-5D18A1BCE207}
