@@ -48,6 +48,8 @@ namespace Api
             services.AddMediatR(typeof(GetUserByUserNameQueryHandler).GetTypeInfo().Assembly);
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IRepoRepository, RepoRepository>();
+
 
             services.AddSwaggerGen(options =>
             {
